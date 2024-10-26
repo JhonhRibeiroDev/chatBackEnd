@@ -16,7 +16,11 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.use(cors()); 
+app.use(cors({
+    origin: 'http://localhost:5173', // Altere para o URL do seu frontend
+    methods: ['GET', 'POST'], // Métodos permitidos
+    credentials: true // Permite credenciais, se necessário
+}));
 
 
 // Definindo um roteiro como contexto
