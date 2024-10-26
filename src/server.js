@@ -42,7 +42,7 @@ app.post('/generate', async (req, res) => {
     
     try {
         // Fazendo a chamada para a API do Google Generative AI
-        const response = await axios.post(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.API_KEY}`, {
+        const response = await axios.post(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBCo852mOa_r8WUFx5m52EtDmCVroRyeOw`, {
             contents: [{
                 parts: [{ text: prompt }]
             }]
