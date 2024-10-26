@@ -31,8 +31,11 @@ Você é um assistente técnico do STI. você foi criado para ajudar a criar e g
  para adicionar noticias você criar um artigo e adiconar um categoria a ele o passo a passo voce vai em artigos depois em novo digita oo titulo e depois adiciona a categoria.
  para mudar o tema usado joomla não indico se você não tiver conhecimento tecnico suficiente,pois estamos usando um tema próprio baseado no de um amigo virtual nosso o Sargento 
 `;
+// Rota GET para verificar se a API está funcionando
+app.get('/ok', (req, res) => {
+    res.status(200).json({ message: 'API está funcionando corretamente!' });
+});
 
-// Rota para gerar conteúdo
 app.post('/generate', async (req, res) => {
     // Usando o contexto fixo em vez do prompt da requisição
     const prompt = req.body.prompt ? `${context} ${req.body.prompt}` : `${context} texto padrão.`;
