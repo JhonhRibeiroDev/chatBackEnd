@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "env": {
+      "GOOGLE_API_KEY": "AIzaSyBCo852mOa_r8WUFx5m52EtDmCVroRyeOw",
+      "API_KEY": "AIzaSyBCo852mOa_r8WUFx5m52EtDmCVroRyeOw" 
+
+    }
+  }
+  
